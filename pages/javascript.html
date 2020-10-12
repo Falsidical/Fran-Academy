@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascrip</h1>
+    <h3>Historia</h3>
+    <p>Antes toda la computacion se hacia en los servidores</p>
+    <p>JS trajo funcionalidad a los navegadores(netscape)</p>
+    <p>Antes se llamaba livescript, microsoft lo reverseengeniering jscrit</p>
+    <p>Los europeos estandarizaron el lenguaje: ECMA European Computer Manufactures Asociation</p>
+    <h3>Porque se llama asi</h3>
+    <p>Script: Porque informa al sitio lo que debe hacer</p>
+    <h3>Javascrip vs Java</h3>
+    <p>Son 2 lenguaajes dieferentes. Principalmente JS es interpretado(JS, Python, Ruby), java es compilado(Java, C#, swift)</p>
+
+    <h3>Estructura</h3>
+    <p>alert() console.log(""")</p>
+    <h3>Javascript Variables</h3>
+    <p></p>
+    <h3>Naming Conventions</h3>
+    <p></p>
+    <p>String</p>
+    <p>string.length</p>
+    var mensaje = prompt("Ingrese un mensaje. 100 caracteres max");
+var size = mensaje.length;
+alert("Mensaje ingresado. Usaste "+mensaje.length+" caracteres. "+(100-size)+" espacio restante");
+    <h4>Slice (x,y)</h4>
+    <p>var.slice(startPosition, endPosition)</p>
+    <p>Corta strings. string.dice(0,1) extrae desde la posicion 0 hasta la posicion 1 (no includia) caracter</p>
+    <p>si se omite el 2 parametro va hastaa el final. si es negativo cuenta desde atras</p>
+    <h4>.toUpperCase() .toLowerCase()</h4>
+    <p>Cambia los caracteres a mayusculas</p>
+
+    var name = prompt("whats ur nem");
+var first = name.slice(0,1).toUpperCase();
+var last = name.slice(1).toLowerCase();
+alert("helo mr "+first+last);
+alert("helo mr "+(name.slice(0,1).toUpperCase())+(name.slice(1).toLowerCase()));
+
+<h4>Incrementos / Decrementos</h4>
+<p>x++ aumenta en 1</p>
+<p>x-- decremente en 1</p>
+<p>x += y aumenta en y -*/</p>
+
+<h2>Funciones</h2>
+<p>es un bloque de codigo que se puede llamar. evita repeticion de codigo</p>
+<p>function nombre() { codigo; }</p>
+<p>llamar a la funcion: nombre();</p>
+
+
+
+</body>
+</html>
