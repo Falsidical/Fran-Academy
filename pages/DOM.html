@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>DOM</h2>
+    <h3>Document Object Model</h3>
+    <p></p>
+    <p>Cataloga los elementos web en objetos que podemos manipular facilmente</p>
+    <p>El navegador se encarga de transforma el documento en un dom con una estructura de arbol</p>
+
+    https://www.w3schools.com/js/js_htmldom.asp
+
+    document
+       |
+      HTML
+       |
+    HEAD   BODY
+         H1 UL ETC
+
+    (en consola)
+    document; : Devuelte todo el documento
+    document.firstElementChild; : html
+    document.firstElementChild.firstElementChild : head
+    document.firstElementChild.lastElementChild : body
+
+    var heading = document.firstElementChild.lastElementChild.firstElementChild;
+    heading.innerHTML = "string"; => cambia el contenido
+
+    https://medium.com/better-programming/whats-best-innertext-vs-innerhtml-vs-textcontent-903ebc43a3fc
+
+    
+    QUERY SELECTOR
+    mas comun. Busca por nombre, clase, id. Permite combinar selectores
+
+    document.querySelector("input").click => busca por nombre
+    document.querySelector("#id")
+    document.querySelector(".btn") 
+    document.querySelectorAll("li.a") = Devuelve un array con los elementos 
+
+
+
+    Estos objetos pueden tener metodos y propiedades: color, etc. Se acceden mediante el "." (get propierty)
+    y se asignan (set) con = 
+
+    Propiedades: innerHTML, style, firstChild
+    Metodos: click(), appendChild(), setAttribute()
+
+
+    GET ELEMENTS BY 
+    broad, mas dificil de especificar
+
+    document.getElementsByTagName("li") : devuelve array con li
+    diferencia con query: trae todos los elementos en un array
+    document.getElementsByTagName("li")[2].style.color = "purple";
+    document.getElementsByTagName("li").lenght
+    document.getElementsByClassName()
+    document.getElementById() = devuelve 1 item obviously
+
+    
+
+    ejemplos
+
+    document.querySelector("button").style.backgroundColor = "yellow";
+    document.querySelector("h1").style.color = "red";
+
+    -> Camel Casing
+    document.querySelector("h1").style.fontSice = "red";
+    w3 dom obj style
+    Valores como string.
+
+    The Separaton of concerns:
+    Structure vs Style vs Behaviour
+   
+    cada cosa debe ocuparse de lo suyo
+    estructura = HTML
+    estilos = css
+    comportamiento = Javascript
+
+    Si hay un problema, se puede encontrar mas facil, por ejemplo si algo no funciona-> javascript, si se ve mal -> css
+
+    Entonces, Para manuipular estilos desde js hay mejores maneras:
+    document.querySelector("button").classList.add("invisible"); = agrega una clase "invicible"
+
+    .classList = muestra las clases
+    .classList.add()
+    .classList.remove()
+    .classList.toggle()
+    asi se puede mantener todos los estilos dentro del css, accediendo desde js
+
+    Texto
+    Acceder al texto desde javascript
+
+    .innerHTML => devuelve el contenido actual del html: <strong>Hello</strong>
+    .innerHTML = "<em>text</em>"; = permite agregar/editar html tags
+    .textContent => duelve solo el texto
+
+    Atributos
+    document.querySelector("a").attributes; = devuelve un array con los atributos
+    document.querySelector("a").getAttribute("href"); "www.asd.com" = devuelve 1 solo atributo
+    document.querySelector("a").setAttribute("href","www.234.com"); = setea un atributo
+    
+</body>
+</html>

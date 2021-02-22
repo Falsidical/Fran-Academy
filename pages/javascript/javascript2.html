@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Para que un boton tenga una accion hay que agregarle un action listener
+        addEventListener() = agrega uno de esos
+        tiene varios eventos, por ejemplo click
+        document.querySelector("button").addEventListener("click", funcion); -> funcion sin (), sino llama a esa funcion
+        Wait for an event -> funcion
+        Se puede poner una funcion anonima (es decir, sin nombre)
+        document.querySelector("button").addEventListener("click", funcion(){ //accion });
+
+        $0.innerHTML = "FranScript";
+        $0.addEventListener("click",function(){console.log("i got clicked")})
+
+        Funciones como parametros:
+
+        function sumar(num1, num2){
+            return num1+num2;
+            }
+            undefined
+            sumar(1,2);
+            3
+            function calcular(num1, num2, operacion){
+            return operacion(num1, num2);
+            }
+            undefined
+            calcular(4,5,sumar)
+            9
+
+            debugger;
+            cacular(4,5,sumar)
+            Paso por paso
+
+            Sonidos usando javascript
+
+            console.log(this)=devuelve el elemento que llamo
+
+            console.log(this.innerHTML);
+        this.style.color = "white";
+        this.classList.toggle("white");
+
+        JAVASCRIPT OBJECTS
+        ojetos: metodos y propiedades con Valores
+
+        var auto = {
+            nombre: "auto1",
+            ruedas: 4,
+            valido: true,
+        }
+
+        Para contruir varios objetos: Constructor
+
+        function Auto (nombre, ruedas, valido){   -> mayuscula, no camel
+            this.nombre = nombre;
+            this.ruedas = ruedas;
+            this.valido = valido;
+            this.funcion = function(){ }
+        }
+
+        inicializando:
+        var auto2 = new Auto("ferrari",4,true);
+
+        Funciones de objeto:
+        {
+            accion: function(){//code};
+        }
+
+
+        Switch
+        case: break: default
+         
+        Agregar un listener al documento
+        escucha cualquier tecla
+        document.addEventListener("keydown", function(){
+            alert("key pressed");
+            });
+
+        HIGHER ORDER FUNCTION
+            Puede recibir una funcion como inputs -> addEventListener (callback )
+
+            "Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción."
+            https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced
+
+    </p>
+</body>
+</html>
