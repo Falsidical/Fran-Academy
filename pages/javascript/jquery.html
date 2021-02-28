@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <h1>jQuery</h1>
+    <h2>Que es</h2>
+    Libreria javascript
+
+    document.querySelector("h1") = $("h1")
+
+    Download->
+    jQuery
+
+    Google CDN :
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    Uso:
+
+    jQuery() o $() -> son lo mismo
+
+    $("h1").css("color","red");
+
+
+    Esperar que el documento este listo. se usa si pones el cdn en el header
+    $(document).ready(function(){
+        $("h1").css("color","red");
+    });
+
+
+    MINIFICATION:
+    Para reducir el tamaño se eliminan todos los espacios . se puede usar para css, js
+    minifier.org
+
+    SELECCIONAR ELEMENTOS
+    document.querySelector("h1");
+    $("h1");
+
+    document.querySelectorAll("button")
+    $("button"); -> no hay diferencia entre seleccionar 1 o varios
+
+    MANIPULACION
+    $("h1").css("color","green"); cambia atributo
+    $("h1").css("color"); devuelve el atributo
+    $("h1").css("font-size");
+    $("h1").css("font-size", "5rem");
+
+    $("h1").addClass("big-title otra-clase");
+    $("h1").removeClass("big-title");
+
+    $("h1").hasClass("big-title"); -> boolean
+
+    TEXTO
+
+    $("h1").text("bye"); -> pero selecciona todos
+    $("button").html("<em>Hey</em>");
+
+    ATRIBUTOS
+    console.log($("img").attr("src"));
+    $("a").attr("href","www.google.com");
+
+    EVENT LISTENERS With jQuery
+
+    $("h1").click(function(){
+        $("h1").css("color"."purple");
+    });
+
+    Para mas de uno en js, se usaba un for
+
+    $("button").click(function(){
+        $("h1").css("color","purple");
+    });
+
+    $("input").keypress(function(event){
+        console.log(event.key);
+    });
+
+    Lista de eventos -> MDN Event Reference
+
+    $("h1").on("mouseover",function(){
+
+    });
+
+    AGREGAR Y QUITAR ELEMENTOS
+    $("h1").before("<button>New</button>");
+
+    .before
+    .after
+    .prepend = agrega dentro al comienzo 
+    .append = agrega dentro al final
+
+    $("h1").remove();
+
+    ANIMATIONS
+
+    $("h1").hide()
+
+    .show()
+    .hide()
+    .toggle()
+
+    Se elimina del flow del html
+    Animacion:
+
+    fadeOut()
+    fadeIn()
+    fadeToggle()
+
+    slideUp;
+    slideDown();
+    slideToggle
+
+    Para mas control:
+
+    .animate({opacity: 0.5}) //solo agregar cosas con valor numerico (no colores)
+
+    margin: "%20"
+
+    CHAIN ANIMATION
+    $().slideUp().slideDown().animate({opacity: 0.5});
+</body>
+</html>
