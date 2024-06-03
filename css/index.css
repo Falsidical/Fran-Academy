@@ -1,24 +1,14 @@
 main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
   .hero {
-    height: 40vh;
-    background-color: #00000080;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
 
-  .content {
-    background-color: #1f1f1f;
-    padding: 0 20px;
-
-    p,
-    h2 {
-      margin: 40px;
+    h1 {
+      font-size: 56px;
+      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.33);
     }
   }
 }

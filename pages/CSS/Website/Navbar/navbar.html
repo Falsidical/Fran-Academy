@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../../css/global.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <title>CSS</title>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Fran Academy</a>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/">Apuntes</a></li>
+        <li><a href="/">Contacto</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="content">
+        <div class="title">
+          <h2>Navbar</h2>
+          <h3>Barra de navegacion</h3>
+        </div>
+        <div class="container">
+          <div class="container-text">
+            <p>Para hacer una barra de navegacion primero empezamos escribiendo el contenido en nuestro documento HTML.</p>
+            <p>
+              Empezamos con la etiqueta <span class="html-code"><span class="html-sym">&lt;</span>nav<span class="html-sym">&gt;</span></span
+              >, que es el elemento semantico para crear un navbar
+            </p>
+          </div>
+          <div class="container-img">
+            <img src="img/navbar01.png" alt="html code" />
+          </div>
+      </div>
+      <div class="container">
+        <div class="container-text">
+          <p>Como una barra de navegacion contiene generalmente una lista de links, tiene sentido utilizar una <span class="html-code"><span class="html-sym">&lt;</span>ul<span class="html-sym">&gt;</span></span
+            > (Lista no ordenada) donde cada <span class="html-code"><span class="html-sym">&lt;</span>li<span class="html-sym">&gt;</span></span> (List item) sea un <span class="html-code"><span class="html-sym">&lt;</span>a<span class="html-sym">&gt;</span></span>(enlace)</p>
+            <br>
+          <p>
+            Dentro del enlance, tenemos el atributo href, que nos permite definir donde queremos que nos lleve el enlace. Con el '#' le establecemos como destino la ubicacion de algun elemento con ese id (Que debemos crear luego)
+          </p>
+        </div>
+        <div class="container-img">
+          <img src="img/navbar02.png" alt="html code" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="container-text">
+          <p>
+            Ahora para darle estilo vamos al CSS y seleccionamos el elemento nav y le damos algo de estilo:
+          </p>
+          <br>
+            <ul>
+              <li>height: La altura del navbar</li>
+              <li>background-color: El color de fondo</li>
+              <li>display: flex (para alinear los items)</li>
+              <li>align-items: center (Para centrar en el medio los links)</li>
+              <li>padding: 0 40px (Para poner un poco de relleno a los costados)</li>
+            </ul>
+            <br>
+          <p>
+            Luego le damos estilo a los links en si:
+          </p>
+          <br>
+          <ul>
+            <li>list-style: none (Para quitar la bola de adorno)</li>
+            <li>display: flex</li>
+            <li>gap: 20px (El espacio entre los elementos)</li>
+          </ul>
+        </div>
+        <div class="container-img">
+          <img src="img/navbar03.png" alt="html code" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Fran Port 2024</p>
+    </footer>
+  </body>
+</html>
